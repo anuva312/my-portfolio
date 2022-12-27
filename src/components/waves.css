@@ -11,7 +11,7 @@
   transform-origin: 50% 50% !important;
   background-color: transparent;
   border-radius: 38% 42%;
-  box-shadow: inset 0 0 10vw rgba(255, 0, 255, 0.452) !important;
+  box-shadow: inset 0 0 10vw rgba(255, 0, 255, 0.451) !important;
   -webkit-box-shadow: inset 0 0 10vw rgba(255, 0, 255, 0.452) !important;
   animation: spin 76s infinite linear;
   mix-blend-mode: normal !important;
