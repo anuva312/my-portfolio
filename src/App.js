@@ -1,6 +1,7 @@
 import "./App.css";
 import Waves from "./components/Waves";
 import Header from "./components/Header";
+import About from "./components/About";
 
 function App() {
   const onSectionClicked = function (sectionName) {
@@ -10,6 +11,7 @@ function App() {
     <div>
       <Waves />
       <Header onClickNavItem={onSectionClicked} />
+      <About />
     </div>
   );
 }
