@@ -1,0 +1,22 @@
+.header {
+  position: fixed;
+  width: 100vw;
+  background: #081730;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.navbar-container {
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+  align-items: center;
+  align-content: center;
+  color: whitesmoke;
+  padding: 10px 20px;
+}
+
+.nav-item {
+  cursor: pointer;
+  font-size: 14px;
+}
