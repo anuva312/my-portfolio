@@ -1,5 +1,5 @@
 import "./waves.css";
 
 export default function Waves() {
-  return <div class="wave"></div>;
+  return <div className="wave"></div>;
 }

@@ -18,5 +18,22 @@
 
 .nav-item {
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.3s;
+}
+
+#about:hover,
+#skills:hover,
+#projects:hover,
+#contact:hover {
+  font-size: 18px;
+}
+
+#about:active,
+#skills:active,
+#projects:active,
+#contact:active {
+  font-weight: bold;
 }
