@@ -21,3 +21,26 @@
 .about-description {
   font-size: 18px;
 }
+
+.about-links-container {
+  margin: 25px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.about-links-icon-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  align-content: center;
+  font-size: 30px;
+}
+
+.about-link-icon {
+  align-self: center;
+  cursor: pointer;
+}
