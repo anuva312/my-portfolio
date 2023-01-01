@@ -47,7 +47,7 @@
 }
 
 .project-tag {
-  background-color: rgb(216, 71, 216);
+  background-color: #8a088a;
   border-radius: 12px;
   padding: 2px 5px;
   color: whitesmoke;
@@ -70,7 +70,7 @@
   background-color: whitesmoke;
   padding: 10px 12px;
   border-radius: 12px;
-  color: #ff00ff;
+  color: #8a088a;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -78,7 +78,7 @@
 .project-buttons:hover,
 .project-buttons:active {
   box-shadow: #d605d6;
-  background-color: #ff00ff;
+  background-color: #8a088a;
   color: white;
   font-weight: bold;
   transform: translate(0, -3px);
