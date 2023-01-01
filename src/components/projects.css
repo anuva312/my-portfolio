@@ -1,0 +1,16 @@
+.project-section-container {
+  padding: 80px 20px 20px;
+}
+
+.all-projects-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-section-title {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
