@@ -7,7 +7,7 @@ export default function ProjectCard({ data }) {
   };
 
   return (
-    <div className="project-card-container">
+    <div className={`project-card-container animate pop delay-${data.id}`}>
       <div className="image-container">
         <img
           src={`${data.image}`}
