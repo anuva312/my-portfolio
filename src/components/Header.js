@@ -7,28 +7,28 @@ export default function Header({ onClickNavItem }) {
         <div
           className="nav-item"
           id="about"
-          onClick={() => onClickNavItem("about")}
+          onClick={() => onClickNavItem("about-section")}
         >
           about me
         </div>
         <div
           className="nav-item"
           id="skills"
-          onClick={() => onClickNavItem("skills")}
+          onClick={() => onClickNavItem("skills-section")}
         >
           skills
         </div>
         <div
           className="nav-item"
           id="projects"
-          onClick={() => onClickNavItem("projects")}
+          onClick={() => onClickNavItem("projects-section")}
         >
           projects
         </div>
         <div
           className="nav-item"
           id="contact"
-          onClick={() => onClickNavItem("contact")}
+          onClick={() => onClickNavItem("contact-section")}
         >
           contact me
         </div>
