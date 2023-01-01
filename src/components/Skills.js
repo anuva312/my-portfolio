@@ -1,10 +1,13 @@
 import "./skills.css";
+import "./animation.css";
 
 export default function Skills() {
   return (
     <div className="skills-main-container" id="skills-section">
-      <div className="skills-main-heading">I have experience in</div>
-      <div className="skills-container">
+      <div className="skills-main-heading animate delay-4">
+        Languages and Tools
+      </div>
+      <div className="skills-container animate pop delay-5">
         <i className="fa-brands fa-react skill-icon"></i>
         <i className="fa-brands fa-square-js skill-icon"></i>
         <i className="fa-brands fa-html5 skill-icon"></i>
