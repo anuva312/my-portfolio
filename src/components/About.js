@@ -13,7 +13,7 @@ export default function About() {
         url = "https://twitter.com/this_is_anuVA";
         break;
       case "linkedin":
-        url = "https://www.linkedin.com/in/anusree-v-a-408554191/";
+        url = "https://www.linkedin.com/in/anusree-va/";
         break;
       default:
         url = null;
