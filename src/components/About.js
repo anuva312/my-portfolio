@@ -23,6 +23,11 @@ export default function About() {
       window.open(url, "_blank");
     }
   };
+
+  const downloadResumeOnClick = function (e) {
+    e.preventDefault();
+  };
+
   return (
     <div className="about-main-container" id="about-section">
       <div className="about-main-heading animate slide">
@@ -51,6 +56,16 @@ export default function About() {
             onClick={(e) => onClickIcon(e, "linkedin")}
           ></i>
         </div>
+      </div>
+      <div className="about-resume-download-button-container">
+        <a href={`/assets/files/Resume.pdf`} download="Resume-Anusree V A">
+          <button
+            className="about-resume-download-button"
+            onClick={() => downloadResumeOnClick()}
+          >
+            Download Resume
+          </button>
+        </a>
       </div>
     </div>
   );

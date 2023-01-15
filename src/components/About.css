@@ -44,3 +44,31 @@
   align-self: center;
   cursor: pointer;
 }
+
+.about-resume-download-button {
+  margin-top: 25px;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  color: #081730;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  font-weight: bold;
+}
+
+.about-resume-download-button:hover,
+.about-resume-download-button:active {
+  color: rgb(145 32 145);
+  box-shadow: 3px 3px 3px #081730;
+  transform: scale(1.08, 1.08);
+}
+
+.about-resume-download-button:active {
+  background-color: antiquewhite;
+  transform: scale(1.06, 1.06);
+  color: rgb(141, 23, 141);
+}
+
+a {
+  text-decoration: none;
+}
