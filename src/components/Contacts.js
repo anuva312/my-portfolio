@@ -1,9 +1,156 @@
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./contacts.css";
 
 export default function Contacts() {
+  const [commentBody, setCommentBody] = useState({});
+  const [error, setError] = useState({});
+
+  const invokeAddCommentAPI = async function (data) {
+    const url = "https://anuva-portfolio.onrender.com/api/v1/comments";
+    try {
+      const response = await (
+        await fetch(url, {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+      ).json();
+      onSuccess(response.message);
+    } catch (error) {
+      console.error(error);
+      onError("Unable to post comment!");
+    }
+  };
+
+  const onError = function (message) {
+    toast.error(message, {
+      theme: "colored",
+    });
+  };
+
+  const onSuccess = function (message) {
+    toast.success(message, {
+      theme: "colored",
+    });
+  };
+
+  const validateComment = function () {
+    let isValidated = true;
+    let _error = { ...error };
+    const emailformat =
+      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (!commentBody.name) {
+      isValidated = false;
+      _error.name = "Name is required";
+    } else {
+      delete _error.name;
+    }
+    if (!commentBody.comment) {
+      isValidated = false;
+      _error.comment = "Comment is required";
+    } else {
+      delete _error.comment;
+    }
+    if (commentBody.email && !commentBody.email.match(emailformat)) {
+      isValidated = false;
+      _error.email = "Not a valid email";
+    } else {
+      delete _error.email;
+    }
+    setError(_error);
+    return isValidated;
+  };
+
+  const onSubmitComment = function () {
+    if (validateComment()) {
+      invokeAddCommentAPI(commentBody);
+    }
+  };
+
+  const onChangeComment = function (e, key) {
+    setCommentBody({ ...commentBody, [key]: e.target.value });
+    let _error = { ...error };
+    delete _error[key];
+    setError(_error);
+  };
+
   return (
     <div className="contacts-main-container" id="contact-section">
+      <ToastContainer />
       <div className="contacts-main-heading">Contact Me</div>
+      <div className="contacts-input-container">
+        <div>
+          <label htmlFor="contacts-name-input" className="contacts-input-label">
+            Name :{" "}
+          </label>
+        </div>
+        <div>
+          <input
+            name="contacts-name-input"
+            id="contacts-name-input"
+            className="contacts-input"
+            onChange={(e) => onChangeComment(e, "name")}
+            required
+          ></input>
+          <div className="contacts-error-message">{error.name}</div>
+        </div>
+      </div>
+      <div className="contacts-input-container">
+        <div>
+          <label
+            htmlFor="contacts-email-input"
+            className="contacts-input-label"
+          >
+            Email :{" "}
+          </label>
+        </div>
+        <div>
+          <input
+            type="email"
+            name="contacts-email-input"
+            id="contacts-email-input"
+            className="contacts-input"
+            onChange={(e) => onChangeComment(e, "email")}
+          ></input>
+          <div className="contacts-error-message">{error.email}</div>
+        </div>
+      </div>
+      <div className="contacts-input-container">
+        <div>
+          <label
+            htmlFor="contacts-comment-input"
+            className="contacts-input-label"
+          >
+            Comment :{" "}
+          </label>
+        </div>
+        <div>
+          <textarea
+            name="contacts-comment-input"
+            id="contacts-comment-input"
+            className="contacts-input"
+            onChange={(e) => onChangeComment(e, "comment")}
+            rows="6"
+            required
+          ></textarea>
+          <div className="contacts-error-message">{error.comment}</div>
+        </div>
+      </div>
+      <div className="contacts-button-container">
+        <button
+          id="contacts-submit-comment-button"
+          className="contacts-submit-comment-button"
+          onClick={() => onSubmitComment()}
+        >
+          Submit
+        </button>
+      </div>
     </div>
   );
 }

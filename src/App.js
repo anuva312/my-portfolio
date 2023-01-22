@@ -4,17 +4,17 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-// import Contacts from "./components/Contacts";
+import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 
 function App() {
   const onSectionClicked = function (sectionName) {
     const section = document.querySelector(`#${sectionName}`);
-    console.log("Inside on click section", section);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
   return (
     <div>
       <Waves />
@@ -22,7 +22,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      {/* <Contacts /> */}
+      <Contacts />
       <Footer />
     </div>
   );

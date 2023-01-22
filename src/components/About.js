@@ -44,20 +44,20 @@ export default function About() {
         Come say hii on :{" "}
         <div className="about-links-icon-container">
           <i
-            class="fa-brands fa-github about-link-icon"
+            className="fa-brands fa-github about-link-icon"
             onClick={(e) => onClickIcon(e, "github")}
           ></i>
           <i
-            class="fa-brands fa-twitter about-link-icon"
+            className="fa-brands fa-twitter about-link-icon"
             onClick={(e) => onClickIcon(e, "twitter")}
           ></i>
           <i
-            class="fa-brands fa-linkedin about-link-icon"
+            className="fa-brands fa-linkedin about-link-icon"
             onClick={(e) => onClickIcon(e, "linkedin")}
           ></i>
         </div>
       </div>
-      <div className="about-resume-download-button-container">
+      <div className="about-resume-download-button-container animate pop delay-5">
         <a href={`/assets/files/Resume.pdf`} download="Resume-Anusree V A">
           <button
             className="about-resume-download-button"

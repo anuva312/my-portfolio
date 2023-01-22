@@ -6,3 +6,97 @@
 .contacts-main-heading {
   font-size: 40px;
 }
+
+.contacts-input-container {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  margin: 20px auto 0;
+  display: flex;
+  align-items: center;
+  align-content: left;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 500px;
+}
+
+.contacts-input-label {
+  color: whitesmoke;
+  text-align: left;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  border: 1px solid;
+  outline-color: transparent;
+  border-radius: 8px;
+  border-color: #d421cbbb;
+  font: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px;
+  width: 75%;
+  min-width: 320px;
+  background: #08173098;
+  color: whitesmoke;
+}
+
+input {
+  height: 50px;
+}
+
+textarea {
+  overflow: hidden;
+  resize: none;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus,
+input:-internal-autofill-selected {
+  border: 1px solid;
+  outline-color: transparent;
+  background: #08173098;
+}
+
+.contacts-submit-comment-button {
+  margin-top: 25px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  color: #081730;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.contacts-submit-comment-button:hover,
+.contacts-submit-comment-button:active {
+  color: rgb(145 32 145);
+  box-shadow: 3px 3px 3px #081730;
+  transform: scale(1.08, 1.08);
+}
+
+.contacts-submit-comment-button:active {
+  background-color: antiquewhite;
+  transform: scale(1.06, 1.06);
+  color: rgb(141, 23, 141);
+}
+
+.contacts-error-message {
+  min-height: 20px;
+  font-size: 15px;
+  color: #d19dd1;
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  input,
+  textarea {
+    width: 95%;
+  }
+}
