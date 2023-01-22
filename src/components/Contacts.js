@@ -4,7 +4,11 @@ import "react-toastify/dist/ReactToastify.css";
 import "./contacts.css";
 
 export default function Contacts() {
-  const [commentBody, setCommentBody] = useState({});
+  const [commentBody, setCommentBody] = useState({
+    name: "",
+    email: "",
+    comment: "",
+  });
   const [error, setError] = useState({});
 
   const invokeAddCommentAPI = async function (data) {
@@ -35,6 +39,8 @@ export default function Contacts() {
   };
 
   const onSuccess = function (message) {
+    setCommentBody({ name: "", email: "", comment: "" });
+    setError({});
     toast.success(message, {
       theme: "colored",
     });
@@ -96,6 +102,7 @@ export default function Contacts() {
             id="contacts-name-input"
             className="contacts-input"
             onChange={(e) => onChangeComment(e, "name")}
+            value={commentBody.name}
             required
           ></input>
           <div className="contacts-error-message">{error.name}</div>
@@ -117,6 +124,7 @@ export default function Contacts() {
             id="contacts-email-input"
             className="contacts-input"
             onChange={(e) => onChangeComment(e, "email")}
+            value={commentBody.email}
           ></input>
           <div className="contacts-error-message">{error.email}</div>
         </div>
@@ -137,6 +145,7 @@ export default function Contacts() {
             className="contacts-input"
             onChange={(e) => onChangeComment(e, "comment")}
             rows="6"
+            value={commentBody.comment}
             required
           ></textarea>
           <div className="contacts-error-message">{error.comment}</div>
