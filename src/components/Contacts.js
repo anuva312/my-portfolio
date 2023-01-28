@@ -89,14 +89,14 @@ export default function Contacts() {
   return (
     <div className="contacts-main-container" id="contact-section">
       <ToastContainer />
-      <div className="contacts-main-heading">Contact Me</div>
+      <div className="contacts-main-heading">Leave a message</div>
       <div className="contacts-input-container">
         <div>
           <label htmlFor="contacts-name-input" className="contacts-input-label">
             Name :{" "}
           </label>
         </div>
-        <div>
+        <div className="contacts-input-area-container">
           <input
             name="contacts-name-input"
             id="contacts-name-input"
@@ -117,7 +117,7 @@ export default function Contacts() {
             Email :{" "}
           </label>
         </div>
-        <div>
+        <div className="contacts-input-area-container">
           <input
             type="email"
             name="contacts-email-input"
@@ -138,7 +138,7 @@ export default function Contacts() {
             Comment :{" "}
           </label>
         </div>
-        <div>
+        <div className="contacts-input-area-container">
           <textarea
             name="contacts-comment-input"
             id="contacts-comment-input"
