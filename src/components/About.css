@@ -43,6 +43,11 @@
 .about-link-icon {
   align-self: center;
   cursor: pointer;
+  transition: transform 0.1s linear;
+}
+
+.about-link-icon:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .about-resume-download-button {
