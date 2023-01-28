@@ -1,29 +1,8 @@
 import "./About.css";
 import "./animation.css";
+import onClickIcon from "./onClickIcon";
 
 export default function About() {
-  const onClickIcon = function (e, type) {
-    e.preventDefault();
-    let url = "";
-    switch (type) {
-      case "github":
-        url = "https://github.com/anuva312";
-        break;
-      case "twitter":
-        url = "https://twitter.com/this_is_anuVA";
-        break;
-      case "linkedin":
-        url = "https://www.linkedin.com/in/anusree-va/";
-        break;
-      default:
-        url = null;
-        break;
-    }
-    if (url) {
-      window.open(url, "_blank");
-    }
-  };
-
   const downloadResumeOnClick = function (e) {
     e.preventDefault();
   };
