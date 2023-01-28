@@ -22,4 +22,10 @@
   font-size: 80px;
   padding: 5px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s linear;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1, 1.1);
 }
