@@ -89,8 +89,8 @@ export default function Contacts() {
   return (
     <div className="contacts-main-container" id="contact-section">
       <ToastContainer />
-      <div className="contacts-main-heading">Leave a message</div>
-      <div className="contacts-input-container">
+      <div className="contacts-main-heading  animate">Leave a message</div>
+      <div className="contacts-input-container animate pop delay-2">
         <div>
           <label htmlFor="contacts-name-input" className="contacts-input-label">
             Name :{" "}
@@ -108,7 +108,7 @@ export default function Contacts() {
           <div className="contacts-error-message">{error.name}</div>
         </div>
       </div>
-      <div className="contacts-input-container">
+      <div className="contacts-input-container animate pop delay-3">
         <div>
           <label
             htmlFor="contacts-email-input"
@@ -129,7 +129,7 @@ export default function Contacts() {
           <div className="contacts-error-message">{error.email}</div>
         </div>
       </div>
-      <div className="contacts-input-container">
+      <div className="contacts-input-container  animate pop delay-4">
         <div>
           <label
             htmlFor="contacts-comment-input"
@@ -151,7 +151,7 @@ export default function Contacts() {
           <div className="contacts-error-message">{error.comment}</div>
         </div>
       </div>
-      <div className="contacts-button-container">
+      <div className="contacts-button-container  animate pop delay-5">
         <button
           id="contacts-submit-comment-button"
           className="contacts-submit-comment-button"
