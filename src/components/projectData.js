@@ -54,7 +54,7 @@ const projectData = [
       "Created the UI as well as APIs required for an image uploader. Created as a part of the Full Stack Developer Challenges in devChallenges.io. The first full stack application I developed.",
     website: "https://master--exquisite-heliotrope-34a798.netlify.app/",
     code: "https://github.com/anuva312/ImageUploader-devChallenges",
-    image: "/assets/images/imageUploader.png",
+    image: "/assets/images/imageUploader.PNG",
     isResponsive: true,
     isCompleted: true,
     isDevChalenge: true,
