@@ -4,11 +4,33 @@ Hey everyone,
 
 This is my Portfolio Version 1.0.0
 
-Find the site in action [here](https://peppy-paletas-f5c09c.netlify.app/)!
+Find the site in action [here](https://anusreeva-portfolio.onrender.com/)!
 
-## Status
+Find the back end code and API documentation [here](https://github.com/anuva312/my-portfolio-backend).
 
-_Ongoing_
+## Built using
+
+- [React JS](https://reactjs.org/)
+- [Node JS](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+
+## How To Use
+
+<!-- For example: -->
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [npm](https://www.npmjs.com/). From your command line:
+
+```bash
+# Clone this repository
+$ git clone "https://github.com/anuva312/my-portfolio"
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run start
+```
 
 ## References
 
