@@ -104,6 +104,6 @@ input:-internal-autofill-selected {
 
   input,
   textarea {
-    min-width: none;
+    width: inherit;
   }
 }
