@@ -1,0 +1,48 @@
+.left-nav-bar-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #081730;
+  z-index: 9999;
+  transition: all 0.75s ease;
+}
+
+.left-nav-bar-item {
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  cursor: pointer;
+  padding: 20px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.left-nav-bar-item:hover {
+  font-size: 18px;
+}
+
+.left-nav-bar-item:active {
+  font-weight: bold;
+}
+
+.blur-background {
+  position: fixed;
+  left: 0px;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #081730af;
+  z-index: 1001;
+}
+
+.material-symbols-outlined {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+  .left-nav-bar-menu-icon-container {
+    display: none;
+  }
+}

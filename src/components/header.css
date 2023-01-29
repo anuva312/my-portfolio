@@ -1,8 +1,7 @@
 .header {
   position: fixed;
   width: 100vw;
-  background: #081730;
-  opacity: 0.8;
+  background: #081730e1;
   padding: 10px;
   left: 0;
   z-index: 1000;
@@ -38,4 +37,10 @@
 #projects:active,
 #contact:active {
   font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar-container {
+    display: none;
+  }
 }

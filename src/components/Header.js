@@ -1,8 +1,10 @@
 import "./header.css";
+import LeftNavBar from "./LeftNavBar";
 
 export default function Header({ onClickNavItem }) {
   return (
     <div className="header">
+      <LeftNavBar onClickNavItem={onClickNavItem} />
       <div className="navbar-container">
         <div
           className="nav-item"
