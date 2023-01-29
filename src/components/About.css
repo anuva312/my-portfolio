@@ -77,3 +77,9 @@
 a {
   text-decoration: none;
 }
+
+@media screen and (max-width: 520px) {
+  .about-main-container {
+    padding-top: 90px;
+  }
+}

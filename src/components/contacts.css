@@ -101,4 +101,9 @@ input:-internal-autofill-selected {
   .contacts-input-area-container {
     width: 95%;
   }
+
+  input,
+  textarea {
+    min-width: none;
+  }
 }
