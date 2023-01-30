@@ -39,46 +39,48 @@ export default function LeftNavBar({ onClickNavItem }) {
               menu
             </span>
           </div>
-          {isNavBarOpened ? (
-            <div className="left-nav-bar-container">
-              <div
-                className="left-nav-bar-item"
-                onClick={() => {
-                  setIsNavBarOpened(false);
-                  onClickNavItem("about-section");
-                }}
-              >
-                about me
-              </div>
-              <div
-                className="left-nav-bar-item"
-                onClick={() => {
-                  setIsNavBarOpened(false);
-                  onClickNavItem("skills-section");
-                }}
-              >
-                skills
-              </div>
-              <div
-                className="left-nav-bar-item"
-                onClick={() => {
-                  setIsNavBarOpened(false);
-                  onClickNavItem("projects-section");
-                }}
-              >
-                projects
-              </div>
-              <div
-                className="left-nav-bar-item"
-                onClick={() => {
-                  setIsNavBarOpened(false);
-                  onClickNavItem("contact-section");
-                }}
-              >
-                contact me
-              </div>
+          <div
+            className={`left-nav-bar-container ${
+              isNavBarOpened ? "slide-in-from-left" : "slide-out-from-left"
+            }`}
+          >
+            <div
+              className="left-nav-bar-item"
+              onClick={() => {
+                setIsNavBarOpened(false);
+                onClickNavItem("about-section");
+              }}
+            >
+              about me
             </div>
-          ) : null}
+            <div
+              className="left-nav-bar-item"
+              onClick={() => {
+                setIsNavBarOpened(false);
+                onClickNavItem("skills-section");
+              }}
+            >
+              skills
+            </div>
+            <div
+              className="left-nav-bar-item"
+              onClick={() => {
+                setIsNavBarOpened(false);
+                onClickNavItem("projects-section");
+              }}
+            >
+              projects
+            </div>
+            <div
+              className="left-nav-bar-item"
+              onClick={() => {
+                setIsNavBarOpened(false);
+                onClickNavItem("contact-section");
+              }}
+            >
+              contact me
+            </div>
+          </div>
         </div>
       </div>
     </div>
