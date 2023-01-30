@@ -29,3 +29,9 @@
 .skill-icon:hover {
   transform: scale(1.1, 1.1);
 }
+
+@media screen and (max-width: 500px) {
+  .skills-container {
+    justify-content: center;
+  }
+}
