@@ -41,8 +41,9 @@ export default function LeftNavBar({ onClickNavItem }) {
           </div>
           <div
             className={`left-nav-bar-container ${
-              isNavBarOpened ? "slide-in-from-left" : "slide-out-from-left"
+              isNavBarOpened ? "slide-in-from-left" : ""
             }`}
+            id="left-nav-bar"
           >
             <div
               className="left-nav-bar-item"
