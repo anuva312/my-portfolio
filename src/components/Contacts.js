@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import LoadingSpinner from "./Spinner";
 import "react-toastify/dist/ReactToastify.css";
 import "./contacts.css";
 
@@ -10,6 +11,7 @@ export default function Contacts() {
     comment: "",
   });
   const [error, setError] = useState({});
+  const [isAPIPending, setIsAPIPending] = useState(false);
 
   const invokeAddCommentAPI = async function (data) {
     const url = "https://anuva-portfolio.onrender.com/api/v1/comments";
@@ -33,16 +35,18 @@ export default function Contacts() {
   };
 
   const onError = function (message) {
+    setIsAPIPending(false);
     toast.error(message, {
-      theme: "colored",
+      theme: "dark",
     });
   };
 
   const onSuccess = function (message) {
+    setIsAPIPending(false);
     setCommentBody({ name: "", email: "", comment: "" });
     setError({});
     toast.success(message, {
-      theme: "colored",
+      theme: "dark",
     });
   };
 
@@ -75,6 +79,7 @@ export default function Contacts() {
 
   const onSubmitComment = function () {
     if (validateComment()) {
+      setIsAPIPending(true);
       invokeAddCommentAPI(commentBody);
     }
   };
@@ -89,6 +94,7 @@ export default function Contacts() {
   return (
     <div className="contacts-main-container" id="contact-section">
       <ToastContainer />
+      {isAPIPending ? <LoadingSpinner /> : null}
       <div className="contacts-main-heading  animate">Leave a message</div>
       <div className="contacts-input-container animate pop delay-2">
         <div>
@@ -103,6 +109,7 @@ export default function Contacts() {
             className="contacts-input"
             onChange={(e) => onChangeComment(e, "name")}
             value={commentBody.name}
+            disabled={isAPIPending}
             required
           ></input>
           <div className="contacts-error-message">{error.name}</div>
@@ -125,6 +132,7 @@ export default function Contacts() {
             className="contacts-input"
             onChange={(e) => onChangeComment(e, "email")}
             value={commentBody.email}
+            disabled={isAPIPending}
           ></input>
           <div className="contacts-error-message">{error.email}</div>
         </div>
@@ -146,6 +154,7 @@ export default function Contacts() {
             onChange={(e) => onChangeComment(e, "comment")}
             rows="6"
             value={commentBody.comment}
+            disabled={isAPIPending}
             required
           ></textarea>
           <div className="contacts-error-message">{error.comment}</div>
@@ -155,6 +164,7 @@ export default function Contacts() {
         <button
           id="contacts-submit-comment-button"
           className="contacts-submit-comment-button"
+          disabled={isAPIPending}
           onClick={() => onSubmitComment()}
         >
           Submit

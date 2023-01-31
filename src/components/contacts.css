@@ -1,6 +1,7 @@
 .contacts-main-container {
   text-align: center;
   padding: 30px 20px 20px;
+  position: relative;
 }
 
 .contacts-main-heading {
@@ -46,6 +47,11 @@ textarea {
   color: whitesmoke;
 }
 
+input:disabled,
+textarea:disabled {
+  background: #222a3698;
+}
+
 input {
   height: 50px;
 }
@@ -55,11 +61,11 @@ textarea {
   resize: none;
 }
 
-input:hover,
-textarea:hover,
-input:focus,
-textarea:focus,
-input:-internal-autofill-selected {
+input:enabled:hover,
+textarea:enabled:hover,
+input:enabled:focus,
+textarea:enabled:focus,
+input:enabled:-internal-autofill-selected {
   border: 1px solid;
   outline-color: transparent;
   background: #08173098;
@@ -77,14 +83,18 @@ input:-internal-autofill-selected {
   font-size: 20px;
 }
 
-.contacts-submit-comment-button:hover,
-.contacts-submit-comment-button:active {
+.contacts-submit-comment-button:disabled {
+  cursor: not-allowed;
+}
+
+.contacts-submit-comment-button:enabled:hover,
+.contacts-submit-comment-button:enabled:active {
   color: rgb(145 32 145);
   box-shadow: 3px 3px 3px #081730;
   transform: scale(1.08, 1.08);
 }
 
-.contacts-submit-comment-button:active {
+.contacts-submit-comment-button:enabled:active {
   background-color: antiquewhite;
   transform: scale(1.06, 1.06);
   color: rgb(141, 23, 141);
@@ -106,4 +116,11 @@ input:-internal-autofill-selected {
   textarea {
     width: inherit;
   }
+}
+
+/* For overriding toastify styles */
+:root {
+  --toastify-color-dark: #041531;
+  --toastify-color-success: #d421cbbb;
+  --toastify-color-error: #d421cbbb;
 }
