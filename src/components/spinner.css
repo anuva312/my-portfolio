@@ -1,0 +1,32 @@
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid whitesmoke;
+  border-top: 6px solid #d421cbbb;
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.spinner-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 999;
+}
+
+@media only screen and (max-width: 600px) {
+  .spinner-container {
+    left: 40%;
+  }
+}
