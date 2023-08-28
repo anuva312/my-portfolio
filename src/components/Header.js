@@ -27,13 +27,13 @@ export default function Header({ onClickNavItem }) {
         >
           projects
         </div>
-        <div
+        {/* <div
           className="nav-item"
           id="contact"
           onClick={() => onClickNavItem("contact-section")}
         >
           contact me
-        </div>
+        </div> */}
       </div>
     </div>
   );

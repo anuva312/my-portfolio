@@ -72,7 +72,7 @@ export default function LeftNavBar({ onClickNavItem }) {
             >
               projects
             </div>
-            <div
+            {/* <div
               className="left-nav-bar-item"
               onClick={() => {
                 setIsNavBarOpened(false);
@@ -80,7 +80,7 @@ export default function LeftNavBar({ onClickNavItem }) {
               }}
             >
               contact me
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
